@@ -23,8 +23,8 @@ const Sidebar = () => {
           <span style={styles.greenDot}></span> Online
         </p>
         <p style={styles.time}>{timeIST} IST local time</p>
-        <p style={styles.location}>Gurugram, India</p>
-        <p style={styles.email}>aviral19rana@gmail.com</p>
+        <p style={styles.location}>Dehradun, India</p>
+        <p style={styles.email}>anuragbachheti1999@gmail.com</p>
         <p style={styles.message}>Let me know your thoughts!</p>
       </div>
     </div>
@@ -47,13 +47,12 @@ const styles = {
   profileTop: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center', // 👈 Center image + name
+    alignItems: 'center',
     textAlign: 'center',
   },
   profileImage: {
-    width: '100px',
-    height: '100px',
-    borderRadius: '50%',
+    width: '150px',
+    height: '150px',
     objectFit: 'cover',
     border: '2px solid #fff',
   },
@@ -63,7 +62,7 @@ const styles = {
     fontWeight: 'bold',
   },
   profileDetails: {
-    textAlign: 'left', // 👈 Left align all details
+    textAlign: 'left',
   },
   title: {
     fontSize: '16px',

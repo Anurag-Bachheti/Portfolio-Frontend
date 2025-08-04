@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import ChannelList from './components/ChannelList';
+import Links from './components/Links';
 import MainContent from './components/MainContent';
 
 const App = () => {
@@ -10,15 +10,21 @@ const App = () => {
 
 
   return (
-    <div className="app" style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div className="app d-flex flex-column vh-100">
+      {/* Header at the top */}
       <Header />
 
-      <div className="app-body" style={{ display: 'flex', flex: 1 }}>
-        <div style={{ flex: 1, display: 'flex' }}>
-          <ChannelList />
+      {/* Body: horizontal layout */}
+      <div className="app-body d-flex flex-grow-1">
+        {/* Left icon-only sidebar */}
+        <Links />
+
+        {/* Main content area */}
+        <div className="flex-grow-1 p-3 overflow-auto">
           <MainContent data={data} />
         </div>
 
+        {/* Optional sidebar on the right */}
         <Sidebar />
       </div>
     </div>
