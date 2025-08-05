@@ -1,19 +1,16 @@
 import React from 'react';
 import '../styles/ProfilePhoto.css';
 import profileImg from '../assets/profile.jpg';
+// import Header from './Header';
 
-function MainContent() {
+function MainContent({ activeSubSection }) {
   return (
     <div className="d-flex h-100 w-100">
-      {/* Left - 20% */}
-      <div className="bg-light border-end" style={{ width: '20%' }}>
-        {/* Left panel content (optional) */}
-      </div>
 
       {/* Right - 80% */}
       <div className="p-3 flex-grow-1">
         {/* Your Name */}
-        <h4 className="mb-4" class="text-center text-wrap">Hi, I am Anurag Bachheti {<br/>} Software Developer</h4>
+        <h4 className="mb-4" class="text-center text-wrap">Hi, I am Anurag Bachheti {<br />} Software Developer</h4>
 
         {/* Discord-like layout */}
         <div className="d-flex">
@@ -35,8 +32,8 @@ function MainContent() {
             <div className="mb-2 p-2 bg-light rounded">Forth Item</div>
             <div className="mb-2 p-2 bg-light rounded">Fifth Item</div>
             <div className="mb-2 p-2 bg-light rounded">Sixth Item</div>
-            <div className="mb-2 p-2 bg-light rounded">Seventh Item</div>
-            <div className="mb-2 p-2 bg-light rounded">Eigth Item</div>
+            {/* <div className="mb-2 p-2 bg-light rounded">Seventh Item</div> */}
+            {/* <div className="mb-2 p-2 bg-light rounded">Eigth Item</div> */}
           </div>
         </div>
 

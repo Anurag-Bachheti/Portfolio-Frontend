@@ -1,7 +1,8 @@
 import React from 'react';
 import profilePic from '../assets/profile.jpg';
 
-const Sidebar = () => {
+const RightSideBar = () => {
+
   const now = new Date();
   const timeIST = now.toLocaleTimeString('en-IN', {
     hour: '2-digit',
@@ -33,7 +34,6 @@ const Sidebar = () => {
 
 const styles = {
   sidebar: {
-    width: '250px',
     backgroundColor: '#1e1e2f',
     padding: '20px',
     color: '#fff',
@@ -106,4 +106,4 @@ const styles = {
   },
 };
 
-export default Sidebar;
+export default RightSideBar;

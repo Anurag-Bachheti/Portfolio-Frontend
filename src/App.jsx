@@ -1,31 +1,47 @@
 import React, { useState } from 'react'
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Links from './components/Links';
 import MainContent from './components/MainContent';
+import LeftSideBar from './components/LeftSideBar';
+import SubSideBar from './components/SubSideBar';
+import RightSideBar from './components/RightSideBar';
 
 const App = () => {
 
-  const [data] = useState("")
+  const [mainSection, setMainSection] = useState("Know Anurag") //SideBar
+  const [activeSubSection, setActiveSubSection] = useState("About Me") //SubSideBar
 
 
   return (
-    <div className="app d-flex flex-column vh-100">
-      {/* Header at the top */}
-      <Header />
+    <div className="container-fluid" style={{ padding: 0, margin: 0 }}>
 
-      {/* Body: horizontal layout */}
-      <div className="app-body d-flex flex-grow-1">
-        {/* Left icon-only sidebar */}
-        <Links />
+      {/* HEADER */}
+      <div className="row">
+        <div className="col-12" style={{ margin: 0, padding: 0 }}>
+          <Header />
+        </div>
+      </div>
 
-        {/* Main content area */}
-        <div className="flex-grow-1 p-3 overflow-auto">
-          <MainContent data={data} />
+      {/* MAIN BODY */}
+      <div className="d-flex" style={{ height: 'calc(100vh - 80px)', width: '100%' }}>
+        {/* Left Sidebar */}
+        <div style={{ width: '60px' }}>
+          <LeftSideBar setMainSection={setMainSection} />
         </div>
 
-        {/* Optional sidebar on the right */}
-        <Sidebar />
+        <div style={{ width: '15%' }}>
+          <SubSideBar mainSection={mainSection} setActiveSubSection={setActiveSubSection} />
+        </div>
+
+         {/* Main Content */}
+        <div style={{ flex: 1 }}>
+          <MainContent activeSubSection={activeSubSection} />
+        </div>
+
+        {/* Right Sidebar */}
+        <div style={{ width: '250px' }}>
+          <RightSideBar />
+        </div>
+
       </div>
     </div>
   );
